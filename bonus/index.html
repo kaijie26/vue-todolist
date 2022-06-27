@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div id="root">
+        <!-- User-input -->
+        <div class="label-container">
+            <input @keyup.enter="addNewTodo()" v-model="userNewInput" type="text" placeholder="Nuovo todo">
+            <button @click="addNewTodo()">Aggiungi</button>
+        </div>
+
+        <!-- List-todo -->
+        <div class="container-list-todo">
+            <ul v-if="todos.length > 0 ">
+                <li v-for="singletodo, index in todos" :class="{'text-decoration': singletodo.done === true } ">
+                    {{ singletodo.todo }}
+
+                    <div @click="removeTodo(index)" class="remove">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                </li>
+
+            </ul>
+
+            <!-- Text if list is empty -->
+            <p v-else >La lista è vuota</p>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
