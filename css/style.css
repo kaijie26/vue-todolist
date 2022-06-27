@@ -1,0 +1,47 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* USER INPUT */
+.label-container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+input{
+    padding: 15px 20px;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+button{
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+/* TODO LIST */
+.container-list-todo{
+    width: 70%;
+    margin: 0 auto;
+    background-color: #f4f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+}
