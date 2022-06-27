@@ -64,6 +64,18 @@ var app = new Vue (
 
             },
             
+            // Funzione al clcik che rimuove o riassegna la linea sbarrata
+            listDone(singletodo){
+                if(singletodo.done === false) {
+                    singletodo.done = true;
+
+                }else{
+                    singletodo.done = false;
+
+                }
+                   
+            }
+            
         },
 
     } 
