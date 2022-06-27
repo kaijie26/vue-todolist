@@ -20,23 +20,14 @@
         <!-- List-todo -->
         <div class="container-list-todo">
             <ul>
-                <li>
-                    lista
+                <li v-for="singletodo in todos" :class="{'text-decoration': singletodo.done === true } ">
+                    {{ singletodo.todo }}
 
-                    <div>cross</div>
+                    <div>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
                 </li>
 
-                <li>
-                    lista
-
-                    <div>cross</div>
-                </li>
-
-                <li>
-                    lista
-
-                    <div>cross</div>
-                </li>
             </ul>
         </div>
 

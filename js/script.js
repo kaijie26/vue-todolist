@@ -14,9 +14,25 @@
 var app = new Vue (
     {
         el: '#root',
-        data: [
-            
-        ]
+        data: {
+            todos: [
+                {
+                    todo: 'Fare i compiti',
+                    done: false,
+                },
+                {
+                    todo: 'Fare la spesa',
+                    done: true,
+                },
+                {
+                    todo: 'Fare il bucato',
+                    done: false,
+                }
+            ]
+
+        },
+
+        
         
     } 
 )
