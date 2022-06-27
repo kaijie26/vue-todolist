@@ -30,27 +30,37 @@ var app = new Vue (
                 }
             ],
 
-            userInput: '',  
+            userNewInput: '',  
 
             
 
         },
 
         methods: {
+            // Funzione al click della croce rimuove la todo 
             removeTodo(index){
                 this.todos.splice(index, 1);
 
             },
 
+            // Funzione al click del bottone 'Aggiungi' crea una nuova todo
+              // Crea una nuova todo solo se la input che inserisce l'utente non sia vuota 
             addNewTodo(){
-                this.todos.push(this.userInput);
-                this.userInput = '';
+                if(this.userNewInput.length > 0 ) {
+                    const userNewObject = {
+                        todo: this.userNewInput,
+                        done: false,
+                    };
+    
+    
+                    this.todos.push(userNewObject);
+                    this.userNewInput = '';
+                    
+                };
 
-            }
+            },
             
         },
 
-        
-        
     } 
 )
