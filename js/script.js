@@ -32,6 +32,14 @@ var app = new Vue (
 
         },
 
+        methods: {
+            removeTodo(index){
+                this.todos.splice(index, 1);
+
+            }
+            
+        },
+
         
         
     } 

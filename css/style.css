@@ -49,3 +49,7 @@ ul li{
 .text-decoration{
     text-decoration: line-through;
 }
+
+.remove{
+    cursor: pointer;
+}

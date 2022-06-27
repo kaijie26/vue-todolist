@@ -19,16 +19,19 @@
 
         <!-- List-todo -->
         <div class="container-list-todo">
-            <ul>
-                <li v-for="singletodo in todos" :class="{'text-decoration': singletodo.done === true } ">
+            <ul v-if="todos.length > 0 ">
+                <li v-for="singletodo, index in todos" :class="{'text-decoration': singletodo.done === true } ">
                     {{ singletodo.todo }}
 
-                    <div>
+                    <div @click="removeTodo(index)" class="remove">
                         <i class="fa fa-times" aria-hidden="true"></i>
                     </div>
                 </li>
 
             </ul>
+
+            <!-- Text if list is empty -->
+            <p v-else >La lista è vuota</p>
         </div>
 
 
