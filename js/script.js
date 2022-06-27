@@ -28,13 +28,23 @@ var app = new Vue (
                     todo: 'Fare il bucato',
                     done: false,
                 }
-            ]
+            ],
+
+            userInput: '',  
+
+            
 
         },
 
         methods: {
             removeTodo(index){
                 this.todos.splice(index, 1);
+
+            },
+
+            addNewTodo(){
+                this.todos.push(this.userInput);
+                this.userInput = '';
 
             }
             
